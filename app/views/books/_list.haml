@@ -1,4 +1,7 @@
-- @books.each do |book|
-	%article
-		= link_to book.title, book_path(book)
-		%p= "Release date: #{book.release_date}"
+.books-list
+	- @books.each do |book|
+		%article	
+			= link_to book.title, book_path(book)
+			%p= "Release date: #{book.release_date}"
+			- if current_user and !book.users.find_by_id(current_user.id)
+				= link_to 'Add to your list', '#', :class => 'add-to-list', :data => { :book => book.id  }

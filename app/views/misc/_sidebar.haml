@@ -1,3 +1,6 @@
 .main-sidebar
 	%ul
 		%li.bg-info= link_to 'Coming soon', coming_soon_path
+		%li.bg-info= link_to 'Already on sale', on_sale_path
+		- if current_user
+			%li.bg-info= link_to 'My List', my_list_path

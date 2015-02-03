@@ -39,7 +39,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'haml-rails', '~> 0.8.2'
 
 
-gem 'devise-bootstrap', '~> 0.0.2'
+#gem 'devise-bootstrap', '~> 0.0.2'
 gem 'devise', '~> 3.4.1'
 
 gem 'twitter-bootstrap-rails', '~> 3.2.0'

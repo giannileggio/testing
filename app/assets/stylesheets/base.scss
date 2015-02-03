@@ -1,3 +1,5 @@
+@import '_shared';
+
 // common elements
 
 body, html {
@@ -17,6 +19,16 @@ ul {
 	clear: both;
 }
 
+.messages {
+	padding: 2px;
+	&.notice {
+		background: yellow;
+	}
+	&.error {
+		background: red;
+	}
+}
+
 // main structure
 .wrapper {
 	position: relative;
@@ -25,8 +37,7 @@ ul {
 	margin: 0 auto;
 	padding-bottom: 80px;
 
-	#main-header {
-		height: 120px;
+	@include responsive(tablet) {
 		width: 100%;
 	}
 
@@ -41,15 +52,34 @@ ul {
 	.content {
 		width: 70%;
 		float: left;
+		@include responsive(mobile-portrait) {
+			float: none;
+			width: 96%;
+			padding: 0 2%;
+		}
 	}
 }
 
+#main-header {
+		height: 120px;
+		width: 100%;
 
+		.user {
+			width: 30%;
+			float: right;
+			height: 100%;
+		}
+	}
 
 .main-sidebar {
 		width: 24%;
 		float: left;
 		padding: 0px 2% 0px;
+
+		@include responsive(mobile-portrait) {
+			float: none;
+			width: 96%;
+		}
 
 		li {
 			list-style: none;

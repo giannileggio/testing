@@ -5,6 +5,10 @@ class Book < ActiveRecord::Base
 
 	validates :title, presence: true
 
+	default_scope -> {order(:release_date)}
+
+	has_and_belongs_to_many :users
+
 	class << self
 
 		def random
@@ -12,7 +16,11 @@ class Book < ActiveRecord::Base
 		end
 
 		def coming_soon
-			where('release_date >= NOW()')
+			where('release_date > NOW()')
+		end
+
+		def on_sale 
+			where('release_date <= NOW()')
 		end
 
 	end
