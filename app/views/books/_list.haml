@@ -1,0 +1,4 @@
+- @books.each do |book|
+	%article
+		= link_to book.title, book_path(book)
+		%p= "Release date: #{book.release_date}"

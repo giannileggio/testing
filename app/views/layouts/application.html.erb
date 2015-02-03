@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="wrapper">
+	<%= render 'misc/header' %>
+	<section class='main clearfix'>
+		<%= render 'misc/sidebar' %>
+		<div class="content">
+			<%= yield %>
+		</div>
+	</section>
+	<%= render 'misc/footer' %>
+</div>
 
 </body>
 </html>

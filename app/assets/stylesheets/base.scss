@@ -1,0 +1,58 @@
+// common elements
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+// main structure
+.wrapper {
+	position: relative;
+	width: 990px;
+	min-height: 100%;
+	margin: 0 auto;
+	padding-bottom: 80px;
+
+	#main-header {
+		height: 120px;
+		width: 100%;
+	}
+
+	#main-footer {
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		height: 80px;
+	}
+
+	.content {
+		width: 70%;
+		float: left;
+	}
+}
+
+
+
+.main-sidebar {
+		width: 24%;
+		float: left;
+		padding: 0px 2% 0px;
+
+		li {
+			list-style: none;
+			padding: 2px;
+		}
+	}
